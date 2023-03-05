@@ -1,0 +1,20 @@
+<h1 class="text-center py-3">New Entry</h1>
+
+<%= form_with(model: @entry) do |form| %>
+  <div class="container col-5">
+    <form>
+      <div class="form-group py-3">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group py-3">
+        <%= form.label :link %>
+        <%= form.text_field :link, class: "form-control" %>
+      </div>
+      <div class="row py-3">
+        <%= form.submit :submit, class: "btn btn-success col m-1" %>
+        <%= link_to "Back to home", root_path, class: "btn btn-info col m-1" %>
+      </div>
+    </form>
+  </div>
+<% end %>

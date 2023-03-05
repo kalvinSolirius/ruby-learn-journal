@@ -1,0 +1,26 @@
+<!--<div class="navbar">-->
+<!--  <div class="nav-home">-->
+    <%#= link_to "Ruby learning journal", root_path, class: "nav-link" %>
+<!--  </div>-->
+<!--  <div class="navbar-link">-->
+      <%#= link_to "New Entry", new_entry_path %>
+<!--  </div>-->
+<!--</div>-->
+
+<div class="navbar navbar-expand-sm navbar-light navbar-guide bg-secondary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <%= link_to "Ruby learning journal", root_path, class: "btn nav-brand" %>
+    </div>
+    <form class="form-search" method="get" id="s" action="/projects">
+      <div class="input-append">
+        <input type="text" class="input-medium search-query" name="s" placeholder="Search..." value="">
+        <button type="submit" class="btn btn-blue search-btn">Go</button>
+      </div>
+    </form>
+    <div class="navbar-link">
+      <%= link_to "Home", root_path, class: "btn btn-primary" %>
+      <%= link_to "New Entry", new_entry_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
